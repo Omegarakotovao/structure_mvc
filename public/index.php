@@ -27,6 +27,12 @@ switch ($path) {
     case '/profil':
         echo "Profil user";
         break;
+    case '/form':
+        $homeController->form();
+        break;
+    case '/exemple':
+        $homeController->exemple();
+        break;
     default:
         echo "Erreur 404";
         break;
