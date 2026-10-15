@@ -8,6 +8,7 @@
     <main>
         <ul>
             <li><a href="/">Accueil</a></li>
+            <li><a href="/form">Formulaire</a></li>
             <li><a href="/login">Se connecter</a></li>
             <li><a href="/register">S'inscrire</a></li>
             <li><a href="/profil">Profil</a></li>
