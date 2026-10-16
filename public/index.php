@@ -7,16 +7,18 @@ $url = parse_url($_SERVER["REQUEST_URI"]);
 //extraction du path
 $path = isset($url["path"]) ? $url["path"] : "/";
 
-//importer les controller
+//importer
 use App\Controller\HomeController;
+use App\Controller\ExerciceController;
 
-//instancier les controller
+//instancier les controllers
 $homeController = new HomeController();
-//test des valeurs du path
+$exerciceController = new ExerciceController();
 
+//test des valeurs du path
 switch ($path) {
     case '/':
-        $homeController->test();
+        $homeController->accueil();
         break;
     case '/login':
         echo  "Se connecter";
@@ -27,11 +29,11 @@ switch ($path) {
     case '/profil':
         echo "Profil user";
         break;
-    case '/form':
-        $homeController->form();
+    case '/ex1':
+        $exerciceController->hello();
         break;
-    case '/exemple':
-        $homeController->exemple();
+    case '/ex3':
+        $exerciceController->gestion();
         break;
     default:
         echo "Erreur 404";
