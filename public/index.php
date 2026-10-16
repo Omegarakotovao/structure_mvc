@@ -15,6 +15,12 @@ use App\Controller\ExerciceController;
 $homeController = new HomeController();
 $exerciceController = new ExerciceController();
 
+//importer les variables d'environnement 
+$dotenv = Dotenv\Dotenv::createImmutable('../');
+$dotenv->load();
+
+dd($_ENV);
+
 //test des valeurs du path
 switch ($path) {
     case '/':
